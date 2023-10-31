@@ -1,6 +1,8 @@
 ﻿#region task1
 
 
+using System.Reflection;
+
 int sum(int n, int m)
 {
 	int result = default;
@@ -127,10 +129,31 @@ string squarearr(params int[] array)
 	return $"{sum * sum}";
 }
 #endregion
+
+#region task8
+void arraychange( int[] array)
+{
+	for (int i = 0; i < array.Length; i++)
+	{
+		if (array[i]<0)
+		{
+			array[i] = array[i] * (-1);
+
+        }
+		
+	}
+}
+#endregion
 //Console.WriteLine(sum(3,7));
 //Console.WriteLine(sumarr(1,3,12,4,5,7,8,2));
 //Console.WriteLine(countarr(2,3,6,7,9,12,14));
 //Console.WriteLine(simple(1));
 //Console.WriteLine(square(16));
 //Console.WriteLine(powerarr(1,3,22,25,26,29,4,5));
-Console.WriteLine(squarearr(1,5,3,7,2,6));
+//Console.WriteLine(squarearr(1,5,3,7,2,6));
+int[] array = { -1, 3, -6, 7, -15, 11 };
+arraychange(array );
+for (int i = 0; i < array.Length; i++)
+{
+	Console.Write($"{array[i]} ");
+}
