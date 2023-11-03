@@ -1,6 +1,7 @@
 ﻿#region task1
 
 
+using System;
 using System.Globalization;
 using System.Reflection;
 
@@ -139,8 +140,8 @@ void arraychange( int[] array)
 	{
 		if (array[i]<0)
 		{
-			array[i] = array[i] * (-1);
-
+			//array[i] = array[i] * (-1);
+			array[i]=Math.Abs(array[i]);
         }
 		
 	}
